@@ -1,3 +1,5 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import { Form, json, useActionData, useNavigation } from '@remix-run/react'
 import { openai, anthropic } from '#app/utils/ai-providers'
 
@@ -47,7 +49,40 @@ const generateImage = async ({ prompt }: { prompt: string }) => {
 	}
 }
 
+function logGeneratedContent({
+	topic,
+	slides,
+	imageUrls,
+}: {
+	topic: string
+	slides: Slides
+	imageUrls: string[]
+}) {
+	const datetime = new Date().toISOString().replace(/:/g, '-')
+	const kebabCaseTopic = topic.toLowerCase().replace(/\s+/g, '-')
+	const logDir = path.join('logs', `${datetime}-${kebabCaseTopic}`)
+
+	fs.mkdirSync(logDir, { recursive: true })
+	fs.writeFileSync(path.join(logDir, 'topic.txt'), topic)
+
+	const slidesWithUrls = slides.map((slide, index) => ({
+		...slide,
+		...('image' in slide && {
+			image: {
+				...slide.image,
+				url: imageUrls[index],
+			},
+		}),
+	}))
+
+	fs.writeFileSync(
+		path.join(logDir, 'slides.json'),
+		JSON.stringify(slidesWithUrls, null, 2),
+	)
+}
+
 export async function action() {
+	const imageUrls: string[] = []
 	const totalSlides = 10
 	const totalTextSlides = 3
 
@@ -83,7 +118,7 @@ export async function action() {
 			: null
 	if (topic == null) {
 		console.error('No topic')
-		return json({ error: 'No topic' })
+		return json({ imageUrls, error: 'No topic' })
 	}
 	console.info('Topic:', topic)
 
@@ -179,8 +214,6 @@ export async function action() {
 		},
 	)
 
-	const imageUrls: string[] = []
-
 	if (slideOutline.content[0]?.type !== 'text') {
 		console.error('Expected text response: ', slideOutline.content)
 		return { imageUrls, error: 'Expected text response' }
@@ -230,6 +263,8 @@ export async function action() {
 	await generateImages()
 	console.info(imageUrls)
 
+	logGeneratedContent({ topic, slides: slidesJson.slides, imageUrls })
+
 	return json({ imageUrls })
 }
 
@@ -246,7 +281,7 @@ export default function Testing() {
 
 			<div>
 				{imageUrls.map((url) => (
-					<img key={url} src={url} />
+					<img key={url} src={url} alt="Generated slide image" />
 				))}
 			</div>
 		</Form>
