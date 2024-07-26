@@ -39,6 +39,7 @@
     "/server-build"
   ],
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
     "@conform-to/react": "^1.1.5",
     "@conform-to/zod": "^1.1.5",
     "@epic-web/cachified": "^5.2.0",
