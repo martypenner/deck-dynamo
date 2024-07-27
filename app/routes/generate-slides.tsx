@@ -7,8 +7,15 @@ import {
 	useFetcher,
 	useLoaderData,
 } from '@remix-run/react'
+import clsx from 'clsx'
 import OpenAI from 'openai'
-import { type KeyboardEvent, useCallback, useEffect, useState } from 'react'
+import {
+	type KeyboardEvent,
+	useCallback,
+	useEffect,
+	useState,
+	useRef,
+} from 'react'
 
 type Slides = Array<
 	| {
@@ -132,7 +139,7 @@ export async function action() {
 
 	const topicResponse = await anthropic.messages.create({
 		model: 'claude-3-5-sonnet-20240620',
-		max_tokens: 8000,
+		max_tokens: 1000,
 		temperature: 0.8,
 		messages: [
 			{
@@ -392,6 +399,8 @@ export default function GeneratePresentation() {
 
 const SlideNavigation = ({ slides }: { slides: string[] }) => {
 	const [currentSlide, setCurrentSlide] = useState(0)
+	const containerRef = useRef<HTMLDivElement>(null)
+	const [isFullscreen, setIsFullScreen] = useState(false)
 
 	const goToNextSlide = useCallback(() => {
 		setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1))
@@ -399,6 +408,15 @@ const SlideNavigation = ({ slides }: { slides: string[] }) => {
 
 	const goToPreviousSlide = useCallback(() => {
 		setCurrentSlide((prev) => Math.max(0, prev - 1))
+	}, [])
+
+	const toggleFullscreen = useCallback(() => {
+		const doIt = async () => {
+			await containerRef.current?.requestFullscreen()
+			setIsFullScreen(true)
+		}
+
+		doIt().catch(console.error)
 	}, [])
 
 	useEffect(() => {
@@ -421,21 +439,43 @@ const SlideNavigation = ({ slides }: { slides: string[] }) => {
 				case 'Backspace':
 					goToPreviousSlide()
 					break
+				case 'f':
+					toggleFullscreen()
+					break
 				default:
 					break
 			}
 		}
+		const handleFullscreenChange = () => {
+			if (!document.fullscreenElement) {
+				setIsFullScreen(false)
+			}
+		}
 
 		window.addEventListener('keydown', handleKeyDown)
+		window.addEventListener('fullscreenchange', handleFullscreenChange)
 		return () => {
 			window.removeEventListener('keydown', handleKeyDown)
+			window.removeEventListener('fullscreenchange', handleFullscreenChange)
 		}
-	}, [goToNextSlide, goToPreviousSlide])
+	}, [goToNextSlide, goToPreviousSlide, toggleFullscreen])
 
 	return (
-		<div className="position-relative">
-			<img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-			<div className="absolute bottom-2.5 right-2.5 rounded bg-black bg-opacity-50 px-2.5 py-1.5 text-xs text-white">
+		<div
+			ref={containerRef}
+			className="position-relative flex h-full w-full items-center justify-center"
+		>
+			<img
+				src={slides[currentSlide]}
+				alt={`Slide ${currentSlide + 1}`}
+				className={clsx(
+					isFullscreen && 'h-full max-h-full w-full max-w-full',
+					'object-contain',
+				)}
+			/>
+			<div
+				className={`absolute ${isFullscreen ? 'bottom-2.5 right-2.5' : 'right-2.5 top-1/2 -translate-y-1/2 transform'} rounded bg-black bg-opacity-50 px-2.5 py-1.5 text-xs text-white`}
+			>
 				{currentSlide + 1} / {slides.length}
 			</div>
 		</div>
