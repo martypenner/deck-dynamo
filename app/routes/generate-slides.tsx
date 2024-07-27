@@ -351,13 +351,13 @@ export default function GeneratePresentation() {
 	const [selectedTopic, setSelectedTopic] = useState(
 		imageUrls.length > 0 ? 'generated' : '',
 	)
-	console.log(selectedTopic)
+	// console.log(selectedTopic)
 
 	const currentTopicSlides =
 		presentations
 			.find((presentation) => presentation.topic === selectedTopic)
 			?.slides?.slice(1) ?? imageUrls
-	console.dir(currentTopicSlides, { depth: null })
+	// console.dir(currentTopicSlides, { depth: null })
 
 	return (
 		<>
@@ -403,6 +403,15 @@ const SlideNavigation = ({ slides }: { slides: string[] }) => {
 
 	useEffect(() => {
 		const handleKeyDown = (event: KeyboardEvent) => {
+			if (
+				!(event.target instanceof HTMLElement) ||
+				event.target.tagName.toLowerCase() !== 'body'
+			)
+				return
+
+			event.preventDefault()
+			event.stopPropagation()
+
 			switch (event.key) {
 				case 'ArrowRight':
 				case ' ':
