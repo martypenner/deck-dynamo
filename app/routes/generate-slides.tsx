@@ -135,12 +135,19 @@ export async function action() {
 				role: 'user',
 				content: `
 						You are an expert improvisational slide deck creator.
-	          Generate the outline for a random slide deck.
+	          Generate the topic for a random slide deck.
 						Tell me only the topic, not anything else. Do not include a prelude, an explanation, or anything
 						other than the topic itself.
 
+						Ensure the topic is simple, but juxtaposes two seemingly unrelated things. The topic should not
+						be too wordy; leave room for improvising.
+
 						<example>
 						The Habits of Wealthy Chimpanzees
+						</example>
+
+						<example>
+						How to Get Rich By Losing Money
 						</example>
 					`,
 			},
