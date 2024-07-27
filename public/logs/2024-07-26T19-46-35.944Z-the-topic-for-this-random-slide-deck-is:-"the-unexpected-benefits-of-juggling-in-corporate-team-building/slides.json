@@ -1,0 +1,65 @@
+[
+	{
+		"title": {
+			"content": "The Unexpected Benefits of Juggling in Corporate Team Building"
+		},
+		"presenter": {
+			"name": "Alex Johnson",
+			"title": "Juggling Enthusiast & HR Specialist"
+		}
+	},
+	{
+		"image": {
+			"description": "A group of businesspeople in suits juggling colorful balls in an office setting, with surprised and amused expressions on their faces",
+			"path": "images/image_1.jpg"
+		}
+	},
+	{
+		"image": {
+			"description": "A close-up of hands juggling stress balls with corporate logos, blurred office background",
+			"path": "images/image_2.jpg"
+		}
+	},
+	{
+		"image": {
+			"description": "A pie chart made of juggling pins, with each section labeled with unexpected benefits like 'Improved Focus' and 'Enhanced Problem-Solving'",
+			"path": "images/image_3.jpg"
+		}
+	},
+	{
+		"image": {
+			"description": "A confused-looking penguin trying to juggle fish on an iceberg",
+			"path": "images/image_4.jpg"
+		}
+	},
+	{
+		"image": {
+			"description": "A split image: on one side, a stressed office worker at a desk; on the other, the same person juggling and smiling",
+			"path": "images/image_5.jpg"
+		}
+	},
+	{
+		"image": {
+			"description": "An astronaut juggling planets in space, with Earth visible in the background",
+			"path": "images/image_6.jpg"
+		}
+	},
+	{
+		"image": {
+			"description": "A cartoon brain with arms juggling light bulbs, symbolizing idea generation",
+			"path": "images/image_7.jpg"
+		}
+	},
+	{
+		"image": {
+			"description": "A group of diverse emojis arranged in a circle, juggling smaller emoji faces between them",
+			"path": "images/image_8.jpg"
+		}
+	},
+	{
+		"image": {
+			"description": "A serene landscape with a rainbow and the text 'In Conclusion' overlaid, with a random object (like a rubber duck) inexplicably floating in the sky",
+			"path": "images/image_9.jpg"
+		}
+	}
+]
