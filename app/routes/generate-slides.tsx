@@ -377,7 +377,7 @@ export default function GeneratePresentation() {
 			</select>
 
 			{selectedTopic.trim() !== '' && (
-				<SlideNavigation slides={currentTopicSlides} />
+				<SlideNavigation key={selectedTopic} slides={currentTopicSlides} />
 			)}
 		</>
 	)
