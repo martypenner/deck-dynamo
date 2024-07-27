@@ -1,0 +1,66 @@
+[
+  {
+    "title": {
+      "content": "The Evolution of Spork Design Through the Ages",
+      "alignment": "center"
+    },
+    "presenter": {
+      "name": "Dr. Utensilia Fusion",
+      "description": "Culinary Anthropologist"
+    }
+  },
+  {
+    "image": {
+      "description": "A timeline showing various spork designs from ancient times to modern day, with exaggerated differences and comical interpretations",
+      "path": "images/image_1.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A close-up of a caveman using a crude spork-like tool made from a seashell to eat dinosaur meat",
+      "path": "images/image_2.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A Victorian-era gentleman in a top hat examining a gold-plated spork through a monocle",
+      "path": "images/image_3.png"
+    }
+  },
+  {
+    "image": {
+      "description": "An astronaut floating in space, using a futuristic spork to eat from a floating blob of food",
+      "path": "images/image_4.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A pie chart showing completely unrelated data about global banana consumption, with the text 'Spork Usage by Continent' overlaid",
+      "path": "images/image_5.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A dramatic action scene of ninjas engaged in combat using oversized sporks as weapons",
+      "path": "images/image_6.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A spork-shaped building towering over a cityscape, with the text 'The Future of Architecture?' overlaid",
+      "path": "images/image_7.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A confused-looking penguin holding a spork and standing next to a pile of fish",
+      "path": "images/image_8.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A random image of a rainbow-colored unicorn jumping over a moon made of cheese, with the text 'In Conclusion' overlaid",
+      "path": "images/image_9.png"
+    }
+  }
+]
