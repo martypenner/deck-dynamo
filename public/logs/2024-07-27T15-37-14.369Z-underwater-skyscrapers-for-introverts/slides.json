@@ -1,0 +1,67 @@
+[
+  {
+    "title": {
+      "content": "Underwater Skyscrapers for Introverts",
+      "alignment": "center"
+    },
+    "presenter": {
+      "name": "Coral Depths",
+      "title": "Subaquatic Architect",
+      "description": "An enigmatic figure wearing scuba gear and a business suit"
+    }
+  },
+  {
+    "image": {
+      "description": "A futuristic underwater city with tall, sleek buildings surrounded by schools of colorful fish",
+      "path": "images/image_1.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A cozy, dimly lit apartment interior with large windows showing an ocean view and passing whales",
+      "path": "images/image_2.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A graph showing declining social interaction metrics overlaid with the text 'The Introvert's Dream'",
+      "path": "images/image_3.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A person in a spacesuit floating in zero gravity, surrounded by office furniture",
+      "path": "images/image_4.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A giant octopus wearing a construction hat and holding blueprints",
+      "path": "images/image_5.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A bustling farmers market scene, but all the vendors and shoppers are fish in human clothes",
+      "path": "images/image_6.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A pie chart with nonsensical labels like 'Bubble Tea Consumption', 'Jellyfish Petting', and 'Underwater Yodeling'",
+      "path": "images/image_7.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A group of penguins standing in an elevator, all wearing business attire and looking at their phones",
+      "path": "images/image_8.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A random image of a toaster in a bathtub with the text 'In Conclusion' overlaid",
+      "path": "images/image_9.png"
+    }
+  }
+]

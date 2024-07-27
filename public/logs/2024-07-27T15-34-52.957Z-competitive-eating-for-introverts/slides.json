@@ -1,0 +1,65 @@
+[
+  {
+    "title": {
+      "content": "Competitive Eating for Introverts"
+    },
+    "presenter": {
+      "name": "Alex Quietman",
+      "title": "Solitary Consumption Specialist"
+    }
+  },
+  {
+    "image": {
+      "description": "A person sitting alone at a table with an enormous pile of hot dogs, looking slightly overwhelmed",
+      "path": "images/image_1.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A crowded competitive eating event with text overlay: 'Your Worst Nightmare?'",
+      "path": "images/image_2.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A cozy, dimly lit room with a comfortable armchair and a small table laden with various foods",
+      "path": "images/image_3.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A split screen showing a bustling restaurant on one side and a peaceful forest glade on the other",
+      "path": "images/image_4.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A person wearing noise-cancelling headphones while surrounded by a variety of colorful fruits and vegetables",
+      "path": "images/image_5.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A close-up of a stopwatch next to a half-eaten pizza",
+      "path": "images/image_6.png"
+    }
+  },
+  {
+    "image": {
+      "description": "An empty podium with a blue ribbon and a giant hamburger trophy",
+      "path": "images/image_7.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A person in a superhero costume made entirely of different types of pasta",
+      "path": "images/image_8.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A serene beach scene with 'In Conclusion' written in the sand, and a giant inflatable banana floating in the water",
+      "path": "images/image_9.png"
+    }
+  }
+]
