@@ -199,7 +199,7 @@ export const meta: MetaFunction<
 			? data?.note.content.slice(0, 97) + '...'
 			: 'No content'
 	return [
-		{ title: `${noteTitle} | ${displayName}'s Notes | Epic Notes` },
+		{ title: `${noteTitle} | ${displayName}'s Notes | Deck Dynamo` },
 		{
 			name: 'description',
 			content: noteContentsSummary,

@@ -8,13 +8,8 @@ import {
 	useLoaderData,
 } from '@remix-run/react'
 import clsx from 'clsx'
-import {
-	type KeyboardEvent,
-	useCallback,
-	useEffect,
-	useState,
-	useRef,
-} from 'react'
+import { useCallback, useEffect, useState, useRef } from 'react'
+import { Button } from '#app/components/ui/button'
 
 type Slides = Array<
 	| {
@@ -352,41 +347,50 @@ export default function GeneratePresentation() {
 	const [selectedTopic, setSelectedTopic] = useState(
 		images.length > 0 ? 'generated' : '',
 	)
-	// console.log(selectedTopic)
-
 	const currentTopicSlides =
 		presentations.find((presentation) => presentation.topic === selectedTopic)
 			?.slides ?? images
-	// console.dir(currentTopicSlides, { depth: null })
-
 	return (
-		<>
-			<Form method="post">
-				<button type="submit" disabled={state !== 'idle'}>
-					{state === 'idle' ? 'Generate presentation' : 'Generating...'}
-				</button>
+		<div className="container px-6 py-4">
+			<Form method="post" className="mb-4">
+				<Button
+					variant="default"
+					size="lg"
+					type="submit"
+					disabled={state !== 'idle'}
+				>
+					{state === 'idle' ? 'Generate a presentation' : 'Generating...'}
+				</Button>
 			</Form>
 
-			<select
-				value={selectedTopic}
-				onChange={(e) => setSelectedTopic(e.target.value)}
-				className="text-black"
-			>
-				<option value="">Select a topic</option>
-				{images.length > 0 && (
-					<option value="generated">Generated presentation</option>
-				)}
-				{presentations.map((presentation) => (
-					<option key={presentation.topic} value={presentation.topic}>
-						{presentation.topic}
-					</option>
-				))}
-			</select>
+			<div className="mb-4 font-bold">OR</div>
+
+			<label>
+				<div className="font-semibold">View one</div>
+				<select
+					value={selectedTopic}
+					onChange={(e) => setSelectedTopic(e.target.value)}
+					className="mb-10 text-black"
+				>
+					<option value=""></option>
+					{images.length > 0 && (
+						<option value="generated">Generated presentation</option>
+					)}
+					{presentations.map((presentation) => (
+						<option key={presentation.topic} value={presentation.topic}>
+							{presentation.topic}
+						</option>
+					))}
+				</select>
+			</label>
 
 			{selectedTopic.trim() !== '' && (
-				<SlideNavigation key={selectedTopic} slides={currentTopicSlides} />
+				<SlideNavigation
+					key={selectedTopic}
+					slides={currentTopicSlides as (string | ArrayBuffer)[]}
+				/>
 			)}
-		</>
+		</div>
 	)
 }
 
@@ -417,7 +421,7 @@ const SlideNavigation = ({
 	}, [])
 
 	useEffect(() => {
-		const handleKeyDown = (event: KeyboardEvent) => {
+		const handleKeyDown = (event: globalThis.KeyboardEvent) => {
 			if (
 				!(event.target instanceof HTMLElement) ||
 				event.target.tagName.toLowerCase() !== 'body'
