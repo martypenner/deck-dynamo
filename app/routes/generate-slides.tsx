@@ -8,7 +8,6 @@ import {
 	useLoaderData,
 } from '@remix-run/react'
 import clsx from 'clsx'
-import OpenAI from 'openai'
 import {
 	type KeyboardEvent,
 	useCallback,
@@ -40,49 +39,42 @@ type Presentation = {
 	slides: string[]
 }
 
-const generateImage = async ({
-	openai,
+async function generateImage({
 	prompt,
 }: {
-	openai: OpenAI
 	prompt: string
-}) => {
-	try {
-		const response = await openai.images
-			.generate({
-				model: 'dall-e-3',
-				prompt,
-				n: 1,
-				size: '1024x1024',
-			})
-			.asResponse()
-		const json = await response.json()
-		return {
-			url: (json as { data: Array<{ url: string }> }).data[0]?.url,
-		}
-	} catch (error) {
-		const err = error as any
-		if ('status' in err && err.status === 429) {
-			console.error('Rate limited, waiting', error)
-			const retryAfter = err.headers['x-ratelimit-reset-images'] || '60'
-			const jitter = Math.random() * 1000
-			const waitTime = parseInt(retryAfter, 10) * 1000 + jitter
-			console.info('waitTime, retryAfter', waitTime, retryAfter)
-			await new Promise((resolve) => setTimeout(resolve, waitTime))
-			return await generateImage({ openai, prompt })
-		}
-		throw error
+}): Promise<ArrayBuffer> {
+	const endpoint = 'https://api.stability.ai/v2beta/stable-image/generate/ultra'
+
+	const formData = new FormData()
+	formData.append('prompt', prompt)
+
+	const response = await fetch(endpoint, {
+		method: 'POST',
+		headers: {
+			Authorization: `Bearer ${process.env.STABILITY_API_KEY}`,
+			Accept: 'image/*',
+			// 'Content-type': 'multipart/form-data',
+		},
+		body: formData,
+	})
+
+	if (!response.ok) {
+		console.error(response)
+		throw new Error(`HTTP error! status: ${response.status}`)
 	}
+
+	return await response.arrayBuffer()
 }
 
 async function storeGeneratedContent({
 	topic,
 	slides,
-	imageUrls,
+	images,
 }: {
 	topic: string
 	slides: Slides
-	imageUrls: string[]
+	images: ArrayBuffer[]
 }) {
 	const datetime = new Date().toISOString().replace(/:/g, '-')
 	const kebabCaseTopic = topic.toLowerCase().replace(/\s+/g, '-')
@@ -94,16 +86,14 @@ async function storeGeneratedContent({
 	const imageDir = path.join(logDir, 'images')
 	fs.mkdirSync(imageDir, { recursive: true })
 
-	const fetchAndSaveImage = async (url: string, index: number) => {
-		const response = await fetch(url)
-		const arrayBuffer = await response.arrayBuffer()
-		const buffer = Buffer.from(arrayBuffer)
-		const imagePath = path.join(imageDir, `image_${index}.jpg`)
+	const fetchAndSaveImage = async (imageData: ArrayBuffer, index: number) => {
+		const buffer = Buffer.from(imageData)
+		const imagePath = path.join(imageDir, `image_${index}.png`)
 		await fs.promises.writeFile(imagePath, buffer)
 		return imagePath
 	}
 
-	const imagePaths = await Promise.all(imageUrls.map(fetchAndSaveImage))
+	const imagePaths = await Promise.all(images.map(fetchAndSaveImage))
 
 	const slidesWithImagePaths = slides.map((slide, index) => ({
 		...slide,
@@ -126,7 +116,7 @@ export async function loader() {
 }
 
 export async function action() {
-	const imageUrls: string[] = []
+	const images: ArrayBuffer[] = []
 	const totalSlides = 10
 	const totalTextSlides = 3
 
@@ -134,7 +124,6 @@ export async function action() {
 		? `Ensure the first slide has the title along with a made-up name and a description of that person's job title or career accomplishments.`
 		: ``
 
-	const openai = new OpenAI({ apiKey: process.env.OPENAI_KEY })
 	const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_KEY })
 
 	const topicResponse = await anthropic.messages.create({
@@ -163,7 +152,7 @@ export async function action() {
 			: null
 	if (topic == null) {
 		console.error('No topic')
-		return json({ imageUrls, error: 'No topic' })
+		return json({ images, error: 'No topic' })
 	}
 	console.info('Topic:', topic)
 
@@ -261,7 +250,7 @@ export async function action() {
 
 	if (slideOutline.content[0]?.type !== 'text') {
 		console.error('Expected text response: ', slideOutline.content)
-		return { imageUrls, error: 'Expected text response' }
+		return { images, error: 'Expected text response' }
 	}
 
 	const slidesJson = JSON.parse(
@@ -271,7 +260,7 @@ export async function action() {
 	) as { slides: Slides } | null
 	if (slidesJson == null) {
 		console.error('Expected JSON response: ', slideOutline.content)
-		return { imageUrls, error: 'Expected JSON response' }
+		return { images, error: 'Expected JSON response' }
 	}
 
 	const generateImages = async () => {
@@ -285,16 +274,11 @@ export async function action() {
 					console.info('Generating image from prompt:', slide.image.description)
 
 					try {
-						const { url } = await generateImage({
-							openai,
+						const imageData = await generateImage({
 							prompt: slide.image.description,
 						})
-						console.info('Generated image:', url)
-						if (url) {
-							imageUrls[index] = url
-						} else {
-							throw new Error('Failed to generate image: No URL returned')
-						}
+						console.info('Generated image')
+						images[index] = imageData
 					} catch (error) {
 						console.error('Failed to generate image:', error)
 						throw error
@@ -307,12 +291,15 @@ export async function action() {
 	}
 
 	await generateImages()
-	console.info(imageUrls)
 
 	// Probably shouldn't await this so that the server can respond more quickly, but meh
-	await storeGeneratedContent({ topic, slides: slidesJson.slides, imageUrls })
+	await storeGeneratedContent({
+		topic,
+		slides: slidesJson.slides,
+		images,
+	})
 
-	return json({ imageUrls })
+	return json({ images })
 }
 
 function getPresentations(): Presentation[] {
@@ -352,18 +339,17 @@ function getPresentations(): Presentation[] {
 export default function GeneratePresentation() {
 	const { presentations } = useLoaderData<typeof loader>()
 	const data = useActionData<typeof action>()
-	const imageUrls = data?.imageUrls ?? []
+	const images = data?.images ?? []
 
 	const { Form, state } = useFetcher()
 	const [selectedTopic, setSelectedTopic] = useState(
-		imageUrls.length > 0 ? 'generated' : '',
+		images.length > 0 ? 'generated' : '',
 	)
 	// console.log(selectedTopic)
 
 	const currentTopicSlides =
-		presentations
-			.find((presentation) => presentation.topic === selectedTopic)
-			?.slides?.slice(1) ?? imageUrls
+		presentations.find((presentation) => presentation.topic === selectedTopic)
+			?.slides ?? images
 	// console.dir(currentTopicSlides, { depth: null })
 
 	return (
@@ -380,7 +366,7 @@ export default function GeneratePresentation() {
 				className="text-black"
 			>
 				<option value="">Select a topic</option>
-				{imageUrls.length > 0 && (
+				{images.length > 0 && (
 					<option value="generated">Generated presentation</option>
 				)}
 				{presentations.map((presentation) => (
@@ -397,7 +383,11 @@ export default function GeneratePresentation() {
 	)
 }
 
-const SlideNavigation = ({ slides }: { slides: string[] }) => {
+const SlideNavigation = ({
+	slides,
+}: {
+	slides: Array<string | ArrayBuffer>
+}) => {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const containerRef = useRef<HTMLDivElement>(null)
 	const [isFullscreen, setIsFullScreen] = useState(false)
@@ -469,13 +459,18 @@ const SlideNavigation = ({ slides }: { slides: string[] }) => {
 			className="position-relative flex h-full w-full items-center justify-center"
 		>
 			<img
-				src={slides[currentSlide]}
+				src={
+					typeof slides[currentSlide] === 'string'
+						? (slides[currentSlide] as string)
+						: arrayBufferToUrl(slides[currentSlide] as ArrayBuffer)
+				}
 				alt={`Slide ${currentSlide + 1}`}
 				className={clsx(
 					isFullscreen && 'h-full max-h-full w-full max-w-full',
 					'object-contain',
 				)}
 			/>
+
 			<div
 				className={`absolute ${isFullscreen ? 'bottom-2.5 right-2.5' : 'right-2.5 top-1/2 -translate-y-1/2 transform'} rounded bg-black bg-opacity-50 px-2.5 py-1.5 text-xs text-white`}
 			>
@@ -483,4 +478,9 @@ const SlideNavigation = ({ slides }: { slides: string[] }) => {
 			</div>
 		</div>
 	)
+}
+
+const arrayBufferToUrl = (buffer: ArrayBuffer): string => {
+	const blob = new Blob([buffer], { type: 'image/png' })
+	return URL.createObjectURL(blob)
 }
