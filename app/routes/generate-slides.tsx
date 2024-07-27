@@ -394,12 +394,12 @@ const SlideNavigation = ({ slides }: { slides: string[] }) => {
 	const [currentSlide, setCurrentSlide] = useState(0)
 
 	const goToNextSlide = useCallback(() => {
-		setCurrentSlide((prev) => (prev + 1) % slides.length)
+		setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1))
 	}, [slides.length])
 
 	const goToPreviousSlide = useCallback(() => {
-		setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-	}, [slides.length])
+		setCurrentSlide((prev) => Math.max(0, prev - 1))
+	}, [])
 
 	useEffect(() => {
 		const handleKeyDown = (event: KeyboardEvent) => {
