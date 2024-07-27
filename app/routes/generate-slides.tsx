@@ -110,7 +110,7 @@ async function storeGeneratedContent({
 		...('image' in slide && {
 			image: {
 				...slide.image,
-				path: imagePaths[index],
+				path: imagePaths[index]?.replace(logDir + '/', ''),
 			},
 		}),
 	}))
@@ -427,19 +427,22 @@ const SlideNavigation = ({ slides }: { slides: string[] }) => {
 			)
 				return
 
-			event.preventDefault()
-			event.stopPropagation()
-
 			switch (event.key) {
 				case 'ArrowRight':
 				case ' ':
+					event.preventDefault()
+					event.stopPropagation()
 					goToNextSlide()
 					break
 				case 'ArrowLeft':
 				case 'Backspace':
+					event.preventDefault()
+					event.stopPropagation()
 					goToPreviousSlide()
 					break
 				case 'f':
+					event.preventDefault()
+					event.stopPropagation()
 					toggleFullscreen()
 					break
 				default:
