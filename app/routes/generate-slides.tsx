@@ -110,6 +110,26 @@ export async function loader() {
 	return json({ presentations: getPresentations() })
 }
 
+function getRandomTopic(): string | undefined {
+	const topicsPath = path.join(process.cwd(), 'topics.txt')
+	let topics = fs
+		.readFileSync(topicsPath, 'utf-8')
+		.split('\n')
+		.filter((line) => line.trim().length > 0)
+
+	if (topics.length === 0) {
+		return
+	}
+
+	const randomIndex = Math.floor(Math.random() * topics.length)
+	const selectedTopic = topics[randomIndex]
+
+	topics.splice(randomIndex, 1)
+	fs.writeFileSync(topicsPath, topics.join('\n'))
+
+	return selectedTopic
+}
+
 export async function action() {
 	const images: ArrayBuffer[] = []
 	const totalSlides = 10
@@ -119,44 +139,14 @@ export async function action() {
 		? `Ensure the first slide has the title along with a made-up name and a description of that person's job title or career accomplishments.`
 		: ``
 
-	const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_KEY })
-
-	const topicResponse = await anthropic.messages.create({
-		model: 'claude-3-5-sonnet-20240620',
-		max_tokens: 1000,
-		temperature: 0.8,
-		messages: [
-			{
-				role: 'user',
-				content: `
-						You are an expert improvisational slide deck creator.
-	          Generate the topic for a random slide deck.
-						Tell me only the topic, not anything else. Do not include a prelude, an explanation, or anything
-						other than the topic itself.
-
-						Ensure the topic is simple, but juxtaposes two seemingly unrelated things. The topic should not
-						be too wordy; leave room for improvising.
-
-						<example>
-						The Habits of Wealthy Chimpanzees
-						</example>
-
-						<example>
-						How to Get Rich By Losing Money
-						</example>
-					`,
-			},
-		],
-	})
-	const topic =
-		topicResponse.content[0]?.type === 'text'
-			? topicResponse.content[0]?.text
-			: null
+	const topic = getRandomTopic()
 	if (topic == null) {
-		console.error('No topic')
-		return json({ images, error: 'No topic' })
+		console.error('No topic available')
+		return json({ images, error: 'No topic available' })
 	}
 	console.info('Topic:', topic)
+
+	const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_KEY })
 
 	const slideOutline = await anthropic.messages.create(
 		{
@@ -184,6 +174,8 @@ export async function action() {
 						${openingSlide}
 						The last slide should contain the words "in conclusion" and a random image.
 						Generate ${totalSlides} slides, including the slides I've already described.
+
+						Try to avoid slides with cats, ducks, penguins, or pizza.
 
 						Output in JSON format using the following schema. Do NOT provide any context, prelude, or
 						explanation; only give back the JSON.
@@ -350,6 +342,7 @@ export default function GeneratePresentation() {
 	const currentTopicSlides =
 		presentations.find((presentation) => presentation.topic === selectedTopic)
 			?.slides ?? images
+
 	return (
 		<div className="container px-6 py-4">
 			<Form method="post" className="mb-4">
