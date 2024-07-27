@@ -204,7 +204,7 @@ export async function action() {
 	                  "name": { "type": "string" },
 	                  "title": { "type": "string" }
 	                },
-	                "required": ["name", "description"]
+	                "required": ["name", "title"]
 	              }
 	            },
 	            "required": ["title", "presenter"],

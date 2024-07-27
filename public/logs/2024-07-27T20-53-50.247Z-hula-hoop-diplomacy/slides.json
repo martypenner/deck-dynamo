@@ -1,0 +1,65 @@
+[
+  {
+    "title": {
+      "content": "Hula Hoop Diplomacy"
+    },
+    "presenter": {
+      "name": "Dr. Swivel McSpinner",
+      "title": "International Circular Motion Expert"
+    }
+  },
+  {
+    "image": {
+      "description": "A world map with colorful hula hoops connecting different countries",
+      "path": "images/image_1.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A group of serious-looking diplomats in suits attempting to hula hoop",
+      "path": "images/image_2.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A close-up of hands shaking inside a giant hula hoop",
+      "path": "images/image_3.png"
+    }
+  },
+  {
+    "image": {
+      "description": "An astronaut on the moon with a hula hoop around their spacesuit",
+      "path": "images/image_4.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A pie chart made entirely of different colored hula hoops",
+      "path": "images/image_5.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A hula hoop being used as a peace symbol, with doves flying through it",
+      "path": "images/image_6.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A giant hula hoop encircling the United Nations building",
+      "path": "images/image_7.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A group of world leaders standing on a podium, each wearing a hula hoop as a sash",
+      "path": "images/image_8.png"
+    }
+  },
+  {
+    "image": {
+      "description": "A random image of a pineapple wearing sunglasses, with the text 'In Conclusion' overlaid",
+      "path": "images/image_9.png"
+    }
+  }
+]
