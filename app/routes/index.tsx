@@ -494,6 +494,13 @@ const SlideNavigation = ({
 			>
 				{currentSlide + 1} / {slides.length}
 			</div>
+
+			<Button
+				onClick={toggleFullscreen}
+				className="absolute bottom-[-40px] left-2.5 rounded bg-black bg-opacity-50 px-2.5 py-1.5 text-xs text-white"
+			>
+				{isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+			</Button>
 		</div>
 	)
 }
