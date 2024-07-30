@@ -457,6 +457,19 @@ const SlideNavigation = ({
 		}
 	}, [goToNextSlide, goToPreviousSlide, toggleFullscreen])
 
+	const handleTouchStart = useCallback(
+		(event: React.TouchEvent) => {
+			const touchX = event.touches[0]?.clientX ?? 0
+			const containerWidth = containerRef.current?.clientWidth ?? 0
+			if (touchX < containerWidth / 2) {
+				goToPreviousSlide()
+			} else {
+				goToNextSlide()
+			}
+		},
+		[goToPreviousSlide, goToNextSlide],
+	)
+
 	return (
 		<div
 			ref={containerRef}
@@ -473,6 +486,7 @@ const SlideNavigation = ({
 					isFullscreen && 'h-full max-h-full w-full max-w-full',
 					'object-contain',
 				)}
+				onTouchStart={handleTouchStart}
 			/>
 
 			<div
