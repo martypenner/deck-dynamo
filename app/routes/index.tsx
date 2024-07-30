@@ -395,8 +395,6 @@ const SlideNavigation = ({
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const containerRef = useRef<HTMLDivElement>(null)
 	const [isFullscreen, setIsFullScreen] = useState(false)
-	const [lastTapTime, setLastTapTime] = useState(0)
-
 	const goToNextSlide = useCallback(() => {
 		setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1))
 	}, [slides.length])
@@ -465,27 +463,24 @@ const SlideNavigation = ({
 	const handleTouchStart = useCallback(
 		(event: React.TouchEvent) => {
 			const touchX = event.touches[0]?.clientX ?? 0
+			const touchY = event.touches[0]?.clientY ?? 0
 			const containerWidth = containerRef.current?.clientWidth ?? 0
-			if (touchX < containerWidth / 2) {
+			const containerHeight = containerRef.current?.clientHeight ?? 0
+
+			// Upper right 10% of the screen
+			if (touchX > containerWidth * 0.9 && touchY < containerHeight * 0.1) {
+				if (isFullscreen) {
+					document.exitFullscreen().catch(console.error)
+					setIsFullScreen(false)
+				}
+			} else if (touchX < containerWidth / 2) {
 				goToPreviousSlide()
 			} else {
 				goToNextSlide()
 			}
 		},
-		[goToPreviousSlide, goToNextSlide],
+		[goToPreviousSlide, goToNextSlide, isFullscreen],
 	)
-
-	const handleDoubleTap = useCallback(() => {
-		const now = new Date().getTime()
-		const timeSinceLastTap = now - lastTapTime
-		if (timeSinceLastTap < 300 && timeSinceLastTap > 0) {
-			if (isFullscreen) {
-				document.exitFullscreen().catch(console.error)
-				setIsFullScreen(false)
-			}
-		}
-		setLastTapTime(now)
-	}, [isFullscreen, lastTapTime])
 
 	return (
 		<div
@@ -504,7 +499,6 @@ const SlideNavigation = ({
 					'object-contain',
 				)}
 				onTouchStart={handleTouchStart}
-				onTouchEnd={handleDoubleTap}
 			/>
 
 			<div
