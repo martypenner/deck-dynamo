@@ -395,6 +395,7 @@ const SlideNavigation = ({
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const containerRef = useRef<HTMLDivElement>(null)
 	const [isFullscreen, setIsFullScreen] = useState(false)
+	const [lastTapTime, setLastTapTime] = useState(0)
 
 	const goToNextSlide = useCallback(() => {
 		setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1))
@@ -474,6 +475,18 @@ const SlideNavigation = ({
 		[goToPreviousSlide, goToNextSlide],
 	)
 
+	const handleDoubleTap = useCallback(() => {
+		const now = new Date().getTime()
+		const timeSinceLastTap = now - lastTapTime
+		if (timeSinceLastTap < 300 && timeSinceLastTap > 0) {
+			if (isFullscreen) {
+				document.exitFullscreen().catch(console.error)
+				setIsFullScreen(false)
+			}
+		}
+		setLastTapTime(now)
+	}, [isFullscreen, lastTapTime])
+
 	return (
 		<div
 			ref={containerRef}
@@ -491,6 +504,7 @@ const SlideNavigation = ({
 					'object-contain',
 				)}
 				onTouchStart={handleTouchStart}
+				onTouchEnd={handleDoubleTap}
 			/>
 
 			<div
@@ -501,7 +515,10 @@ const SlideNavigation = ({
 
 			<Button
 				onClick={toggleFullscreen}
-				className="absolute bottom-[-40px] left-2.5 rounded bg-black bg-opacity-50 px-2.5 py-1.5 text-xs text-white"
+				className={clsx(
+					isFullscreen && 'hidden',
+					'touch-device:block absolute bottom-[180px] left-2.5 rounded bg-black bg-opacity-50 px-2.5 py-1.5 text-xs text-white sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden',
+				)}
 			>
 				{isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
 			</Button>
