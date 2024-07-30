@@ -405,13 +405,17 @@ const SlideNavigation = ({
 	}, [])
 
 	const toggleFullscreen = useCallback(() => {
-		const doIt = async () => {
-			await containerRef.current?.requestFullscreen()
-			setIsFullScreen(true)
+		if (!isFullscreen) {
+			const doIt = async () => {
+				await containerRef.current?.requestFullscreen()
+				setIsFullScreen(true)
+			}
+			doIt().catch(console.error)
+		} else {
+			document.exitFullscreen().catch(console.error)
+			setIsFullScreen(false)
 		}
-
-		doIt().catch(console.error)
-	}, [])
+	}, [isFullscreen])
 
 	useEffect(() => {
 		const handleKeyDown = (event: globalThis.KeyboardEvent) => {
