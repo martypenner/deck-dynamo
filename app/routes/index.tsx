@@ -461,11 +461,11 @@ const SlideNavigation = ({
 	}, [goToNextSlide, goToPreviousSlide, toggleFullscreen])
 
 	const handleTouchStart = useCallback(
-		(event: React.TouchEvent) => {
+		(event: React.TouchEvent<HTMLImageElement>) => {
 			const touchX = event.touches[0]?.clientX ?? 0
 			const touchY = event.touches[0]?.clientY ?? 0
-			const containerWidth = containerRef.current?.clientWidth ?? 0
-			const containerHeight = containerRef.current?.clientHeight ?? 0
+			const containerWidth = event.currentTarget.clientWidth
+			const containerHeight = event.currentTarget.clientHeight
 
 			// Upper right 10% of the screen
 			if (touchX > containerWidth * 0.9 && touchY < containerHeight * 0.1) {
