@@ -20,6 +20,7 @@ const schema = z.object({
 	OPENAI_KEY: z.string(),
 	ANTHROPIC_KEY: z.string(),
 	STABILITY_API_KEY: z.string(),
+	REPLICATE_API_KEY: z.string(),
 })
 
 declare global {

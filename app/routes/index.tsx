@@ -9,6 +9,7 @@ import {
 } from '@remix-run/react'
 import clsx from 'clsx'
 import { useCallback, useEffect, useState, useRef } from 'react'
+import Replicate from 'replicate'
 import { Button } from '#app/components/ui/button'
 
 type Slides = Array<{
@@ -23,7 +24,7 @@ type Presentation = {
 	slides: string[]
 }
 
-async function generateImage({
+async function generateImageStableDiffusionUltra({
 	prompt,
 }: {
 	prompt: string
@@ -47,6 +48,37 @@ async function generateImage({
 		console.error(response)
 		throw new Error(`HTTP error! status: ${response.status}`)
 	}
+
+	return await response.arrayBuffer()
+}
+async function generateImageReplicateBlackForestLabsFluxPro({
+	prompt,
+}: {
+	prompt: string
+}): Promise<ArrayBuffer> {
+	const replicate = new Replicate({
+		auth: process.env.REPLICATE_API_KEY,
+	})
+	const input = {
+		steps: 50,
+		prompt,
+		guidance: 3,
+		interval: 2.5,
+		aspect_ratio: '1:1',
+		safety_tolerance: 4,
+	}
+
+	console.time('generate image on replicate')
+	const url = (await replicate.run('black-forest-labs/flux-pro', {
+		input,
+	})) as unknown as string
+	console.timeEnd('generate image on replicate')
+
+	console.time('fetch image from replicate')
+	const response = await fetch(url, {
+		method: 'GET',
+	})
+	console.timeEnd('fetch image from replicate')
 
 	return await response.arrayBuffer()
 }
@@ -250,9 +282,13 @@ export async function action() {
 					console.info('Generating image from prompt:', slide.image.description)
 
 					try {
-						const imageData = await generateImage({
-							prompt: slide.image.description,
-						})
+						// const imageData = await generateImageStableDiffusionUltra({
+						// 	prompt: slide.image.description,
+						// })
+						const imageData =
+							await generateImageReplicateBlackForestLabsFluxPro({
+								prompt: slide.image.description,
+							})
 						console.info('Generated image')
 						images[index] = imageData
 					} catch (error) {
