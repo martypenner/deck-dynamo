@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Competitive Cloud Seeding: A Stormy Affair"
+  },
+  "presenter": {
+    "name": "Nimbus Cumulus",
+    "title": "Atmospheric Manipulator Extraordinaire"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A dramatic image of a thundercloud with lightning, overlaid with the text 'Competitive Cloud Seeding: A Stormy Affair'",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A cartoon-style image of two people arm wrestling, but instead of hands, they're using miniature clouds",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A graph showing rainfall statistics, but the bars are made of umbrellas of varying sizes",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A surreal landscape where giant silver iodide crystals are growing out of the ground like trees",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A split-screen image: on one side, a lush green field; on the other, a barren desert, with a question mark in between",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An old-fashioned wanted poster, but instead of a person, it shows a rain cloud with the text 'WANTED: For excessive precipitation'",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A futuristic cityscape where buildings have strange contraptions on their roofs, seemingly designed to interact with clouds",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A comical image of a person in a lab coat trying to stuff a cloud into a briefcase",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A tournament bracket, but instead of team names, it has different types of clouds (cumulus, stratus, etc.)",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a giraffe wearing sunglasses, with the text 'In Conclusion' overlaid",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Ninja Accountants: Balancing Books in the Shadows"
+  },
+  "presenter": {
+    "name": "Shurikane Smith",
+    "title": "Master of Stealth Finances"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A silhouette of a person in ninja attire sitting at a desk with a calculator and stacks of papers",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A pie chart made of throwing stars",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A briefcase opening to reveal smoke bombs and ledgers",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant abacus with a ninja balancing on top",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A skyscraper at night with a ninja scaling the side, holding a tax form",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A tropical beach with palm trees and a hammock. Text overlay: 'Offshore Accounts?'",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A medieval castle with a moat filled with receipts and invoices",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A ninja star embedded in a wooden desk next to a stack of neatly organized folders",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A group of people in business attire doing tai chi in a park. Text overlay: 'Team Building Exercise'",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a pineapple wearing sunglasses. Text overlay: 'In Conclusion'",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Competitive Cloud Sculpting"
+  },
+  "presenter": {
+    "name": "Skylar Nimbus",
+    "title": "Atmospheric Artist"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A majestic cumulus cloud formation against a vibrant blue sky",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person wearing a jetpack and wielding oversized scissors, approaching a cloud",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant scoreboard in the sky with floating numbers and cloud-shaped icons",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A cloud shaped like a perfect DNA double helix",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A group of people in lab coats gathered around a miniature tornado in a jar",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An elaborate cloud castle with turrets and a drawbridge made entirely of vapor",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person surfing on a longboard made of condensed cloud material",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant cloud-shaped trophy with the text 'World's Best Nephologist' overlaid",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A futuristic cityscape where all buildings are made of swirling, stable cloud formations",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a potted cactus with the text 'In Conclusion' overlaid",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

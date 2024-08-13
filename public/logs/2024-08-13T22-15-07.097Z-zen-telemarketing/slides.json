@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Zen Telemarketing"
+  },
+  "presenter": {
+    "name": "Serenity Callsworth",
+    "title": "Mindful Marketing Guru"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A serene zen garden with a telephone rising out of the sand like a rock",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person in a business suit meditating on top of a giant rotary phone",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A tranquil koi pond with phone cords instead of fish",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A bonsai tree with miniature telephones hanging from its branches",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A call center with employees sitting in lotus position on yoga mats instead of chairs",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A spaceship control panel with a red telephone prominently featured. Text overlay: 'Intergalactic Cold Calls'",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant fortune cookie with a telephone cord coming out instead of a paper fortune",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A peaceful mountain landscape with telephone poles shaped like Buddhist prayer flags",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A telephone handset transformed into a paintbrush, painting a colorful mandala. Text overlay: 'The Art of Persuasion'",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a rubber duck wearing a top hat and monocle. Text overlay: 'In Conclusion'",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

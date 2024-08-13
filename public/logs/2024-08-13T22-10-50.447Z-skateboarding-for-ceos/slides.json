@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Skateboarding for CEOs"
+  },
+  "presenter": {
+    "name": "Ollie Kickflip",
+    "title": "Executive Shredder"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A businessman in a suit doing a kickflip on a skateboard",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A graph showing increased productivity with a skateboard icon at the peak",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A boardroom with skateboards instead of chairs",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A stock market ticker tape with skateboarding terms like 'Ollie,' 'Grind,' and 'Halfpipe' instead of company names",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A pie chart made of skateboard wheels with the text 'Risk vs. Reward'",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An astronaut skateboarding on the moon",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A corporate ladder replaced with a skateboard ramp",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A group of penguins in business suits standing around a melting ice cap",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A skateboard with company logos on the deck",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a traffic jam with the text 'In Conclusion' overlaid",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Interpretive Tech Support"
+  },
+  "presenter": {
+    "name": "Alex Techspeare",
+    "title": "Digital Divination Specialist"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A crystal ball with a computer mouse inside",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person meditating on top of a giant keyboard",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A tarot card spread with tech icons instead of traditional symbols",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A confused person tangled in ethernet cables like a puppet",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A fortune cookie with binary code spilling out instead of a paper slip",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A computer screen showing a blue screen of death with the text 'Your aura needs debugging'",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person in a wizard robe waving a USB stick like a wand",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A ouija board with computer keys instead of letters",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A tech support hotline operator wearing a turban and gazing into a crystal ball",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a cactus in a desert with the text 'In Conclusion' overlaid",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

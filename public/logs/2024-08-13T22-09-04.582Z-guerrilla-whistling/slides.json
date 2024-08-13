@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Guerrilla Whistling"
+  },
+  "presenter": {
+    "name": "Melody Maverick",
+    "title": "Covert Whistling Specialist"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A person in camouflage gear whistling in a dense forest",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "Close-up of pursed lips with musical notes floating around",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A street performer surrounded by a crowd, with text overlay: 'The Art of Distraction'",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A diagram of the human respiratory system",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person parachuting into a concert venue",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A collection of various whistles and flutes",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A group of people in business attire having a heated argument",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A cartoon of a superhero with sound waves emanating from their mouth",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person standing on a soapbox in a busy city square, with text overlay: 'Revolution through Melody'",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a chocolate fountain, with text overlay: 'In Conclusion'",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

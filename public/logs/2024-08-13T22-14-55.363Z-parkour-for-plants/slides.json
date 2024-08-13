@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Parkour for Plants"
+  },
+  "presenter": {
+    "name": "Dr. Leaf Jumper",
+    "title": "Botanical Acrobatics Specialist"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A vine dramatically swinging between two trees",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A cactus wearing sunglasses and a backwards cap",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A bonsai tree doing a handstand on a cliff edge",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A Venus flytrap juggling three flies",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A sunflower surfing on a giant leaf down a waterfall",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A mushroom doing a backflip off a log with text overlay: 'Fungi Gymnastics'",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A group of cacti forming a human pyramid in the desert",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A tree with its roots exposed, walking on stilts across a canyon",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A dandelion parachuting through a thunderstorm with text overlay: 'Extreme Seed Dispersal'",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a pineapple wearing a space suit with text overlay: 'In Conclusion'",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

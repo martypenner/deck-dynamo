@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Interpretive Data Entry"
+  },
+  "presenter": {
+    "name": "Alex Johnson",
+    "title": "Data Interpretation Specialist"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A person typing on a keyboard with musical notes floating above",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A surreal landscape with giant spreadsheets as mountains",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A ballet dancer pirouetting on top of a giant computer mouse",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An abstract painting with numbers and letters swirling in a vortex",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person in a space suit floating among holographic data points",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A forest where the trees are made of barcode trunks and QR code leaves",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant robotic hand entering data into a miniature city",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A labyrinth made of binary code with a confused person at the center",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A series of dominos with database symbols falling in a pattern",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a llama wearing sunglasses with the text 'In Conclusion' overlaid",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

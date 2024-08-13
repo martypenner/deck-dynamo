@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Breakdancing for Diplomats"
+  },
+  "presenter": {
+    "name": "Ambassador Groovy McSpin",
+    "title": "International Dance Relations Specialist"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A diplomat in a suit doing a handstand on a conference table",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A world map with colorful dance moves connecting different countries",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A formal banquet hall transformed into a breakdancing arena with text overlay: 'Diplomatic Moves'",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A briefcase exploding with confetti and breakdancing gear",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A line graph showing 'International Incidents' decreasing as 'Sick Moves' increase",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant disco ball replacing the dome of a government building",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A breakdancing battle between mascots of different countries",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A formal handshake transforming into a complex breakdancing move",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A diplomat's passport stamped with various breakdancing certifications",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a submarine sandwich with text overlay: 'In Conclusion'",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

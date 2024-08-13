@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Underwater Chess Tournaments"
+  },
+  "presenter": {
+    "name": "Coral Kingfisher",
+    "title": "Aquatic Game Specialist"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A chessboard floating in a serene underwater scene with colorful fish swimming around it",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A scuba diver carefully moving a knight piece on an underwater chessboard",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An octopus wearing a tiny referee hat, hovering over a chess game between two seahorses",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant submarine shaped like a rook chess piece emerging from the depths",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A pie chart showing bizarre statistics with labels like 'Bubble interference' and 'Shark spectators'",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A mermaid holding up a trophy made of coral and seashells",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An underwater volcano erupting chess pieces instead of lava",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A group of confused-looking fish trying to play checkers on a chessboard",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant squid tangled up in oversized chess pieces on the ocean floor",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a pineapple wearing sunglasses on a beach with text overlay 'In Conclusion'",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}

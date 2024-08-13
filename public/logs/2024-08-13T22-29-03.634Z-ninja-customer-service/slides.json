@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Ninja Customer Service"
+  },
+  "presenter": {
+    "name": "Shadow Whisperer",
+    "title": "Stealth Support Specialist"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A ninja in full black attire answering a phone at a modern customer service desk",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A smoke bomb exploding with the words 'PROBLEM SOLVED' emerging from the smoke",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A confused looking elephant wearing a ninja headband in a office cubicle",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A shuriken (ninja star) with 'FAQ' written on each blade, spinning in mid-air",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A ninja scaling a skyscraper made of stacked complaint forms",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An astronaut in space holding a 'Customer Satisfaction Survey' clipboard",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant robotic T-Rex with a headset, stomping through a city",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A ninja meditating on top of a mountain of unread emails",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A medieval knight jousting with a giant pencil against a dragon labeled 'Customer Complaints'",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a submarine emerging from an iceberg with the text 'In Conclusion' overlaid",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}
