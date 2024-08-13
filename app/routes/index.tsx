@@ -336,18 +336,61 @@ export default function GeneratePresentation() {
 		presentations.find((presentation) => presentation.topic === selectedTopic)
 			?.slides ?? images
 
+	const selectRandomPresentation = useCallback(() => {
+		const chosenPresentations = JSON.parse(
+			localStorage.getItem('chosenPresentations') ?? '[]',
+		) as string[]
+		const availablePresentations = presentations.filter(
+			(presentation) => !chosenPresentations.includes(presentation.topic),
+		)
+
+		if (availablePresentations.length > 0) {
+			const randomIndex = Math.floor(
+				Math.random() * availablePresentations.length,
+			)
+			const randomPresentation = availablePresentations[randomIndex]?.topic
+			if (randomPresentation == null) return
+
+			setSelectedTopic(randomPresentation)
+			chosenPresentations.push(randomPresentation)
+			localStorage.setItem(
+				'chosenPresentations',
+				JSON.stringify(chosenPresentations),
+			)
+		} else {
+			alert('All presentations have been viewed. Resetting selection.')
+			localStorage.setItem(
+				'chosenPresentations',
+				JSON.stringify(chosenPresentations),
+			)
+		}
+	}, [presentations])
+
 	return (
 		<div className="container px-6 py-4">
-			<Form method="post" className="mb-4">
+			<div className="mb-4 flex items-center">
+				<Form method="post">
+					<Button
+						variant="default"
+						size="lg"
+						type="submit"
+						disabled={state !== 'idle'}
+					>
+						{state === 'idle' ? 'Generate a presentation' : 'Generating...'}
+					</Button>
+				</Form>
+
+				<span className="mx-4 font-bold">OR</span>
+
 				<Button
 					variant="default"
 					size="lg"
-					type="submit"
-					disabled={state !== 'idle'}
+					type="button"
+					onClick={selectRandomPresentation}
 				>
-					{state === 'idle' ? 'Generate a presentation' : 'Generating...'}
+					View a random presentation
 				</Button>
-			</Form>
+			</div>
 
 			<div className="mb-4 font-bold">OR</div>
 
