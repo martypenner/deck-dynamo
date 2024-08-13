@@ -165,7 +165,7 @@ export async function action() {
 						The last slide should contain the words "in conclusion" and a random image.
 						Generate ${totalSlides} slides, including the slides I've already described.
 
-						Try to avoid slides with cats, ducks, penguins, or pizza.
+						Try to avoid slides with cats, ducks, penguins, pineapple, or pizza.
 
 						Output in JSON format using the following schema. Do NOT provide any context, prelude, or
 						explanation; only give back the JSON.
