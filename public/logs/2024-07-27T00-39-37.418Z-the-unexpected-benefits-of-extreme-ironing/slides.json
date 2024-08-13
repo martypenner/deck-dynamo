@@ -1,66 +1,63 @@
-[
-	{
-		"title": {
-			"content": "The Unexpected Benefits of Extreme Ironing",
-			"alignment": "center"
+{
+	"title": "The Unexpected Benefits of Extreme Ironing",
+	"presenter": {
+		"name": "Alex Smoothpress",
+		"title": "World-renowned extreme ironing enthusiast"
+	},
+	"slides": [
+		{
+			"image": {
+				"description": "A person ironing a shirt while skydiving, with text overlay: 'Wrinkle-free at 15,000 feet'",
+				"path": "images/image_1.jpg"
+			}
 		},
-		"presenter": {
-			"name": "Alex Smoothpress",
-			"title": "World-renowned extreme ironing enthusiast"
+		{
+			"image": {
+				"description": "A graph showing an inverse correlation between ironing board sales and stress levels",
+				"path": "images/image_2.jpg"
+			}
+		},
+		{
+			"image": {
+				"description": "A collection of exotic postage stamps featuring extreme ironing scenes",
+				"path": "images/image_3.jpg"
+			}
+		},
+		{
+			"image": {
+				"description": "A person ironing underwater in a coral reef, surrounded by curious fish",
+				"path": "images/image_4.jpg"
+			}
+		},
+		{
+			"image": {
+				"description": "A before-and-after comparison of a wrinkled map and a perfectly ironed map, with text overlay: 'Navigation Revolution'",
+				"path": "images/image_5.jpg"
+			}
+		},
+		{
+			"image": {
+				"description": "A group of penguins watching a person ironing on an iceberg",
+				"path": "images/image_6.jpg"
+			}
+		},
+		{
+			"image": {
+				"description": "A line of people at a bus stop, all holding irons and ironing boards",
+				"path": "images/image_7.jpg"
+			}
+		},
+		{
+			"image": {
+				"description": "An astronaut ironing a flag on the surface of Mars",
+				"path": "images/image_8.jpg"
+			}
+		},
+		{
+			"image": {
+				"description": "A random image of a cat wearing sunglasses, with text overlay: 'In Conclusion'",
+				"path": "images/image_9.jpg"
+			}
 		}
-	},
-	{
-		"image": {
-			"description": "A person ironing a shirt while skydiving, with text overlay: 'Wrinkle-free at 15,000 feet'",
-			"path": "images/image_1.jpg"
-		}
-	},
-	{
-		"image": {
-			"description": "A graph showing an inverse correlation between ironing board sales and stress levels",
-			"path": "images/image_2.jpg"
-		}
-	},
-	{
-		"image": {
-			"description": "A collection of exotic postage stamps featuring extreme ironing scenes",
-			"path": "images/image_3.jpg"
-		}
-	},
-	{
-		"image": {
-			"description": "A person ironing underwater in a coral reef, surrounded by curious fish",
-			"path": "images/image_4.jpg"
-		}
-	},
-	{
-		"image": {
-			"description": "A before-and-after comparison of a wrinkled map and a perfectly ironed map, with text overlay: 'Navigation Revolution'",
-			"path": "images/image_5.jpg"
-		}
-	},
-	{
-		"image": {
-			"description": "A group of penguins watching a person ironing on an iceberg",
-			"path": "images/image_6.jpg"
-		}
-	},
-	{
-		"image": {
-			"description": "A line of people at a bus stop, all holding irons and ironing boards",
-			"path": "images/image_7.jpg"
-		}
-	},
-	{
-		"image": {
-			"description": "An astronaut ironing a flag on the surface of Mars",
-			"path": "images/image_8.jpg"
-		}
-	},
-	{
-		"image": {
-			"description": "A random image of a cat wearing sunglasses, with text overlay: 'In Conclusion'",
-			"path": "images/image_9.jpg"
-		}
-	}
-]
+	]
+}

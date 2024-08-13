@@ -11,22 +11,11 @@ import clsx from 'clsx'
 import { useCallback, useEffect, useState, useRef } from 'react'
 import { Button } from '#app/components/ui/button'
 
-type Slides = Array<
-	| {
-			title: {
-				content: string
-			}
-			presenter: {
-				name: string
-				title: string
-			}
-	  }
-	| {
-			image: {
-				description: string
-			}
-	  }
->
+type Slides = Array<{
+	image: {
+		description: string
+	}
+}>
 
 type Presentation = {
 	date: Date
@@ -64,10 +53,14 @@ async function generateImage({
 
 async function storeGeneratedContent({
 	topic,
+	title,
+	presenter,
 	slides,
 	images,
 }: {
 	topic: string
+	title: { content: string }
+	presenter: { name: string; title: string }
 	slides: Slides
 	images: ArrayBuffer[]
 }) {
@@ -89,20 +82,17 @@ async function storeGeneratedContent({
 	}
 
 	const imagePaths = await Promise.all(images.map(fetchAndSaveImage))
-
 	const slidesWithImagePaths = slides.map((slide, index) => ({
 		...slide,
-		...('image' in slide && {
-			image: {
-				...slide.image,
-				path: imagePaths[index]?.replace(logDir + '/', ''),
-			},
-		}),
+		image: {
+			...slide.image,
+			path: imagePaths[index]?.replace(logDir + '/', ''),
+		},
 	}))
 
 	fs.writeFileSync(
 		path.join(logDir, 'slides.json'),
-		JSON.stringify(slidesWithImagePaths, null, 2),
+		JSON.stringify({ title, presenter, slides: slidesWithImagePaths }, null, 2),
 	)
 }
 
@@ -184,51 +174,41 @@ export async function action() {
 	  "$schema": "https://json-schema.org/draft/2020-12/schema",
 	  "type": "object",
 	  "properties": {
+	    "title": {
+	      "type": "object",
+	      "properties": {
+	        "content": { "type": "string" }
+	      },
+	      "required": ["content"]
+	    },
+	    "presenter": {
+	      "type": "object",
+	      "properties": {
+	        "name": { "type": "string" },
+	        "title": { "type": "string" }
+	      },
+	      "required": ["name", "title"]
+	    },
 	    "slides": {
 	      "type": "array",
 	      "items": {
 	        "type": "object",
-	        "oneOf": [
-	          {
+	        "properties": {
+	          "image": {
+	            "type": "object",
 	            "properties": {
-	              "title": {
-	                "type": "object",
-	                "properties": {
-	                  "content": { "type": "string" }
-	                },
-	                "required": ["content", "alignment"]
-	              },
-	              "presenter": {
-	                "type": "object",
-	                "properties": {
-	                  "name": { "type": "string" },
-	                  "title": { "type": "string" }
-	                },
-	                "required": ["name", "title"]
-	              }
+	              "description": { "type": "string" }
 	            },
-	            "required": ["title", "presenter"],
-	            "unevaluatedProperties": false
-	          },
-	          {
-	            "properties": {
-	              "image": {
-	                "type": "object",
-	                "properties": {
-	                  "description": { "type": "string" }
-	                },
-	                "required": ["description"]
-	              }
-	            },
-	            "required": ["image"],
-	            "unevaluatedProperties": false
+	            "required": ["description"]
 	          }
-	        ]
+	        },
+	        "required": ["image"],
+	        "unevaluatedProperties": false
 	      },
 	      "minItems": 1
 	    }
 	  },
-	  "required": ["slides"]
+	  "required": ["title", "presenter", "slides"]
 	}
 						\`\`\`
 					`,
@@ -251,7 +231,11 @@ export async function action() {
 		slideOutline.content[0]?.type === 'text'
 			? (slideOutline.content[0].text ?? 'null')
 			: 'null',
-	) as { slides: Slides } | null
+	) as {
+		title: { content: string }
+		presenter: { name: string; title: string }
+		slides: Slides
+	} | null
 	if (slidesJson == null) {
 		console.error('Expected JSON response: ', slideOutline.content)
 		return { images, error: 'Expected JSON response' }
@@ -261,8 +245,6 @@ export async function action() {
 		const generatePromises = []
 
 		for (const [index, slide] of slidesJson.slides.entries()) {
-			if ('title' in slide) continue
-
 			generatePromises.push(
 				(async () => {
 					console.info('Generating image from prompt:', slide.image.description)
@@ -289,6 +271,8 @@ export async function action() {
 	// Probably shouldn't await this so that the server can respond more quickly, but meh
 	await storeGeneratedContent({
 		topic,
+		title: slidesJson.title,
+		presenter: slidesJson.presenter,
 		slides: slidesJson.slides,
 		images,
 	})
@@ -308,16 +292,25 @@ function getPresentations(): Presentation[] {
 		const [date] = generation.split('Z-')
 
 		const slidesPath = path.join(generationPath, 'slides.json')
-		const slides = JSON.parse(fs.readFileSync(slidesPath, 'utf-8')) as {
-			image: { path: string }
-		}[]
+		const presentation = JSON.parse(fs.readFileSync(slidesPath, 'utf-8')) as {
+			title: string
+			presenter: { name: string; title: string }
+			slides: {
+				image: { path: string }
+			}[]
+		}
+
+		const title = presentation.title
+		const presenter = presentation.presenter
 
 		return {
 			date: new Date(date ?? ''),
 			topic,
-			slides: slides
-				.filter((slide) => 'image' in slide)
-				.map((slide) => '/logs/' + generation + '/' + slide.image.path),
+			title,
+			presenter,
+			slides: presentation.slides.map(
+				(slide) => '/logs/' + generation + '/' + slide.image.path,
+			),
 		}
 	})
 

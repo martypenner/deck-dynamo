@@ -1,66 +1,63 @@
-[
-	{
-		"title": {
-			"content": "Underwater Yoga for Astronauts",
-			"alignment": "center"
+{
+	"title": "Underwater Yoga for Astronauts",
+	"presenter": {
+		"name": "Dr. Bubbles McFloaty",
+		"title": "Chief Space Aquatics Officer"
+	},
+	"slides": [
+		{
+			"image": {
+				"description": "An astronaut in a spacesuit doing a downward dog pose underwater, with fish swimming around",
+				"path": "images/image_1.png"
+			}
 		},
-		"presenter": {
-			"name": "Dr. Bubbles McFloaty",
-			"title": "Chief Space Aquatics Officer"
+		{
+			"image": {
+				"description": "A diagram of the human body in zero gravity, with arrows pointing to muscle groups affected by weightlessness",
+				"path": "images/image_2.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A futuristic underwater habitat with a large glass dome, inside which astronauts are practicing yoga",
+				"path": "images/image_3.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A close-up of an astronaut's face inside a helmet, looking surprised and confused, with the text 'Why am I doing this?' overlaid",
+				"path": "images/image_4.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A group of penguins doing synchronized swimming formations",
+				"path": "images/image_5.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A cartoon of the solar system, with each planet represented by a different yoga pose",
+				"path": "images/image_6.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A split-screen image: on one side, an astronaut floating in space; on the other, a person floating in a sensory deprivation tank",
+				"path": "images/image_7.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A pie chart with nonsensical segments labeled 'Cosmic Flexibility', 'Aquatic Zen', and 'Space Noodle Arms'",
+				"path": "images/image_8.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A random image of a llama wearing sunglasses, with the text 'In Conclusion' overlaid",
+				"path": "images/image_9.png"
+			}
 		}
-	},
-	{
-		"image": {
-			"description": "An astronaut in a spacesuit doing a downward dog pose underwater, with fish swimming around",
-			"path": "images/image_1.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A diagram of the human body in zero gravity, with arrows pointing to muscle groups affected by weightlessness",
-			"path": "images/image_2.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A futuristic underwater habitat with a large glass dome, inside which astronauts are practicing yoga",
-			"path": "images/image_3.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A close-up of an astronaut's face inside a helmet, looking surprised and confused, with the text 'Why am I doing this?' overlaid",
-			"path": "images/image_4.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A group of penguins doing synchronized swimming formations",
-			"path": "images/image_5.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A cartoon of the solar system, with each planet represented by a different yoga pose",
-			"path": "images/image_6.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A split-screen image: on one side, an astronaut floating in space; on the other, a person floating in a sensory deprivation tank",
-			"path": "images/image_7.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A pie chart with nonsensical segments labeled 'Cosmic Flexibility', 'Aquatic Zen', and 'Space Noodle Arms'",
-			"path": "images/image_8.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A random image of a llama wearing sunglasses, with the text 'In Conclusion' overlaid",
-			"path": "images/image_9.png"
-		}
-	}
-]
+	]
+}

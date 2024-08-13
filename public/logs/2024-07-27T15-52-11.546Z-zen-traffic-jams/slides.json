@@ -1,66 +1,63 @@
-[
-	{
-		"title": {
-			"content": "Zen Traffic Jams",
-			"alignment": "center"
+{
+	"title": "Zen Traffic Jams",
+	"presenter": {
+		"name": "Alex Tranquil",
+		"title": "Mindfulness in Motion Expert"
+	},
+	"slides": [
+		{
+			"image": {
+				"description": "A serene Japanese zen garden with raked sand patterns resembling traffic lanes",
+				"path": "images/image_1.png"
+			}
 		},
-		"presenter": {
-			"name": "Alex Tranquil",
-			"title": "Mindfulness in Motion Expert"
+		{
+			"image": {
+				"description": "A crowded highway at sunset with cars arranged to form a yin-yang symbol",
+				"path": "images/image_2.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A group of people doing yoga poses on top of their cars in a gridlocked intersection",
+				"path": "images/image_3.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A giant slice of pizza floating in space with pepperoni arranged like cars in a traffic jam",
+				"path": "images/image_4.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A bonsai tree growing out of a toy car stuck in a miniature traffic jam",
+				"path": "images/image_5.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A Buddha statue wearing noise-cancelling headphones in the middle of a chaotic intersection",
+				"path": "images/image_6.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A group of penguins waddling in an orderly line across a busy crosswalk",
+				"path": "images/image_7.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A massive hourglass filled with tiny cars instead of sand, with the text 'Time is an illusion' overlaid",
+				"path": "images/image_8.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A random image of a pineapple wearing sunglasses on a beach with the text 'In conclusion' overlaid",
+				"path": "images/image_9.png"
+			}
 		}
-	},
-	{
-		"image": {
-			"description": "A serene Japanese zen garden with raked sand patterns resembling traffic lanes",
-			"path": "images/image_1.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A crowded highway at sunset with cars arranged to form a yin-yang symbol",
-			"path": "images/image_2.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A group of people doing yoga poses on top of their cars in a gridlocked intersection",
-			"path": "images/image_3.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A giant slice of pizza floating in space with pepperoni arranged like cars in a traffic jam",
-			"path": "images/image_4.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A bonsai tree growing out of a toy car stuck in a miniature traffic jam",
-			"path": "images/image_5.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A Buddha statue wearing noise-cancelling headphones in the middle of a chaotic intersection",
-			"path": "images/image_6.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A group of penguins waddling in an orderly line across a busy crosswalk",
-			"path": "images/image_7.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A massive hourglass filled with tiny cars instead of sand, with the text 'Time is an illusion' overlaid",
-			"path": "images/image_8.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A random image of a pineapple wearing sunglasses on a beach with the text 'In conclusion' overlaid",
-			"path": "images/image_9.png"
-		}
-	}
-]
+	]
+}

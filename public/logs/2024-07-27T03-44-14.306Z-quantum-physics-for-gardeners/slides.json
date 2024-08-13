@@ -1,66 +1,60 @@
-[
-	{
-		"title": {
-			"content": "Quantum Physics for Gardeners",
-			"alignment": "center"
+{
+	"title": "Quantum Physics for Gardeners",
+	"presenter": { "name": "Dr. Leaf Planck", "title": "Quantum Horticulturist" },
+	"slides": [
+		{
+			"image": {
+				"description": "A close-up of a plant leaf with superimposed quantum wave functions",
+				"path": "images/image_1.png"
+			}
 		},
-		"presenter": {
-			"name": "Dr. Leaf Planck",
-			"title": "Quantum Horticulturist"
+		{
+			"image": {
+				"description": "A garden gnome standing next to a Schrödinger's cat box",
+				"path": "images/image_2.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A watering can pouring out a stream of water molecules and subatomic particles",
+				"path": "images/image_3.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A confused-looking gardener staring at a quantum entangled pair of tomatoes",
+				"path": "images/image_4.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A garden shed transforming into a particle accelerator",
+				"path": "images/image_5.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A flowerpot with the text 'Heisenberg's Uncertainty Principle: You can know where you planted it OR when it will bloom, but not both' overlaid",
+				"path": "images/image_6.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A quantum computer made entirely out of vegetables and gardening tools",
+				"path": "images/image_7.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A gardener wearing VR goggles, apparently pruning a virtual probability tree",
+				"path": "images/image_8.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A random image (e.g., a surprised cat) with the text 'In Conclusion' overlaid",
+				"path": "images/image_9.png"
+			}
 		}
-	},
-	{
-		"image": {
-			"description": "A close-up of a plant leaf with superimposed quantum wave functions",
-			"path": "images/image_1.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A garden gnome standing next to a Schrödinger's cat box",
-			"path": "images/image_2.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A watering can pouring out a stream of water molecules and subatomic particles",
-			"path": "images/image_3.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A confused-looking gardener staring at a quantum entangled pair of tomatoes",
-			"path": "images/image_4.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A garden shed transforming into a particle accelerator",
-			"path": "images/image_5.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A flowerpot with the text 'Heisenberg's Uncertainty Principle: You can know where you planted it OR when it will bloom, but not both' overlaid",
-			"path": "images/image_6.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A quantum computer made entirely out of vegetables and gardening tools",
-			"path": "images/image_7.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A gardener wearing VR goggles, apparently pruning a virtual probability tree",
-			"path": "images/image_8.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A random image (e.g., a surprised cat) with the text 'In Conclusion' overlaid",
-			"path": "images/image_9.png"
-		}
-	}
-]
+	]
+}

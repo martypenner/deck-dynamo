@@ -1,66 +1,63 @@
-[
-	{
-		"title": {
-			"content": "The Untold History of Novelty Keychains",
-			"alignment": "center"
+{
+	"title": "The Untold History of Novelty Keychains",
+	"presenter": {
+		"name": "Dr. Jingle Jangle",
+		"title": "Renowned Keychain Archaeologist"
+	},
+	"slides": [
+		{
+			"image": {
+				"description": "A giant, oversized keychain shaped like a banana, hanging from the Eiffel Tower",
+				"path": "images/image_1.png"
+			}
 		},
-		"presenter": {
-			"name": "Dr. Jingle Jangle",
-			"title": "Renowned Keychain Archaeologist"
+		{
+			"image": {
+				"description": "A collage of various novelty keychains from different eras, arranged to form the shape of a question mark",
+				"path": "images/image_2.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A group of ancient Egyptians gathered around a hieroglyphic depiction of a keychain, looking puzzled",
+				"path": "images/image_3.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A pie chart made entirely of miniature keychain pizzas, with text overlay: 'Market Share by Flavor'",
+				"path": "images/image_4.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A keychain-themed amusement park, with roller coasters shaped like keys and a Ferris wheel made of dangling keychains",
+				"path": "images/image_5.png"
+			}
+		},
+		{
+			"image": {
+				"description": "An astronaut on the moon, planting a flag with a novelty keychain attached to it",
+				"path": "images/image_6.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A dramatic courtroom scene where the judge is using a gavel-shaped keychain instead of an actual gavel",
+				"path": "images/image_7.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A secret underground vault filled with rare and valuable keychains, guarded by laser beams and security robots",
+				"path": "images/image_8.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A random image of a rubber duck wearing sunglasses, with the text 'In Conclusion' overlaid in a bold font",
+				"path": "images/image_9.png"
+			}
 		}
-	},
-	{
-		"image": {
-			"description": "A giant, oversized keychain shaped like a banana, hanging from the Eiffel Tower",
-			"path": "images/image_1.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A collage of various novelty keychains from different eras, arranged to form the shape of a question mark",
-			"path": "images/image_2.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A group of ancient Egyptians gathered around a hieroglyphic depiction of a keychain, looking puzzled",
-			"path": "images/image_3.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A pie chart made entirely of miniature keychain pizzas, with text overlay: 'Market Share by Flavor'",
-			"path": "images/image_4.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A keychain-themed amusement park, with roller coasters shaped like keys and a Ferris wheel made of dangling keychains",
-			"path": "images/image_5.png"
-		}
-	},
-	{
-		"image": {
-			"description": "An astronaut on the moon, planting a flag with a novelty keychain attached to it",
-			"path": "images/image_6.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A dramatic courtroom scene where the judge is using a gavel-shaped keychain instead of an actual gavel",
-			"path": "images/image_7.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A secret underground vault filled with rare and valuable keychains, guarded by laser beams and security robots",
-			"path": "images/image_8.png"
-		}
-	},
-	{
-		"image": {
-			"description": "A random image of a rubber duck wearing sunglasses, with the text 'In Conclusion' overlaid in a bold font",
-			"path": "images/image_9.png"
-		}
-	}
-]
+	]
+}

@@ -1,66 +1,60 @@
-[
-  {
-    "title": {
-      "content": "Decoding Ancient Hieroglyphs with Emojis",
-      "alignment": "center"
-    },
-    "presenter": {
-      "name": "Dr. Emoji Rosetta",
-      "title": "Emoji Archaeologist"
-    }
-  },
-  {
-    "image": {
-      "description": "A large Egyptian pyramid with various emojis floating around it, including 🐪, 👑, and 🐍",
-      "path": "images/image_1.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A split screen showing ancient hieroglyphs on one side and corresponding modern emojis on the other",
-      "path": "images/image_2.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A confused archaeologist scratching their head while looking at a tablet filled with emojis",
-      "path": "images/image_3.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A smartphone displaying an emoji keyboard next to an ancient stone tablet with hieroglyphs",
-      "path": "images/image_4.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A group of penguins sliding down an iceberg with Egyptian headdresses",
-      "path": "images/image_5.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A giant slice of pizza with hieroglyphs carved into its crust",
-      "path": "images/image_6.png"
-    }
-  },
-  {
-    "image": {
-      "description": "An alien spaceship beaming up a sphinx, with the text 'Ancient Aliens or Ancient Emojis?' overlaid",
-      "path": "images/image_7.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A time-traveling DeLorean car with hieroglyphs on its doors and emojis coming out of the exhaust",
-      "path": "images/image_8.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A random image of a surprised cat wearing sunglasses, with the text 'In Conclusion' overlaid",
-      "path": "images/image_9.png"
-    }
-  }
-]
+{
+	"title": "Decoding Ancient Hieroglyphs with Emojis",
+	"presenter": { "name": "Dr. Emoji Rosetta", "title": "Emoji Archaeologist" },
+	"slides": [
+		{
+			"image": {
+				"description": "A large Egyptian pyramid with various emojis floating around it, including 🐪, 👑, and 🐍",
+				"path": "images/image_1.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A split screen showing ancient hieroglyphs on one side and corresponding modern emojis on the other",
+				"path": "images/image_2.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A confused archaeologist scratching their head while looking at a tablet filled with emojis",
+				"path": "images/image_3.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A smartphone displaying an emoji keyboard next to an ancient stone tablet with hieroglyphs",
+				"path": "images/image_4.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A group of penguins sliding down an iceberg with Egyptian headdresses",
+				"path": "images/image_5.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A giant slice of pizza with hieroglyphs carved into its crust",
+				"path": "images/image_6.png"
+			}
+		},
+		{
+			"image": {
+				"description": "An alien spaceship beaming up a sphinx, with the text 'Ancient Aliens or Ancient Emojis?' overlaid",
+				"path": "images/image_7.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A time-traveling DeLorean car with hieroglyphs on its doors and emojis coming out of the exhaust",
+				"path": "images/image_8.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A random image of a surprised cat wearing sunglasses, with the text 'In Conclusion' overlaid",
+				"path": "images/image_9.png"
+			}
+		}
+	]
+}

@@ -1,66 +1,60 @@
-[
-  {
-    "title": {
-      "content": "The Rise and Fall of Competitive Sock Puppet Theater",
-      "alignment": "center"
-    },
-    "presenter": {
-      "name": "Dr. Sockrates",
-      "title": "Puppet Historian"
-    }
-  },
-  {
-    "image": {
-      "description": "A dramatic stage with velvet curtains, spotlights, and a lineup of colorful sock puppets",
-      "path": "images/image_1.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A black and white photograph of a 1920s underground speakeasy with patrons watching sock puppets",
-      "path": "images/image_2.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A montage of newspaper headlines with phrases like 'Sock Puppet Mania Sweeps Nation' and 'Underground Puppet Leagues Exposed'",
-      "path": "images/image_3.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A pie chart made entirely of mismatched socks, with text overlay: 'Market Share by Puppet Material'",
-      "path": "images/image_4.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A group of stern-looking judges holding scorecards, sitting in front of a miniature puppet theater",
-      "path": "images/image_5.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A futuristic cityscape with holographic billboards featuring sock puppet advertisements",
-      "path": "images/image_6.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A chaotic courtroom scene with sock puppets as lawyers, judge, and jury",
-      "path": "images/image_7.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A desolate, post-apocalyptic landscape with a lone sock puppet standing dramatically on a hill",
-      "path": "images/image_8.png"
-    }
-  },
-  {
-    "image": {
-      "description": "A random image of a tropical beach at sunset with the text overlay: 'In Conclusion'",
-      "path": "images/image_9.png"
-    }
-  }
-]
+{
+	"title": "The Rise and Fall of Competitive Sock Puppet Theater",
+	"presenter": { "name": "Dr. Sockrates", "title": "Puppet Historian" },
+	"slides": [
+		{
+			"image": {
+				"description": "A dramatic stage with velvet curtains, spotlights, and a lineup of colorful sock puppets",
+				"path": "images/image_1.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A black and white photograph of a 1920s underground speakeasy with patrons watching sock puppets",
+				"path": "images/image_2.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A montage of newspaper headlines with phrases like 'Sock Puppet Mania Sweeps Nation' and 'Underground Puppet Leagues Exposed'",
+				"path": "images/image_3.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A pie chart made entirely of mismatched socks, with text overlay: 'Market Share by Puppet Material'",
+				"path": "images/image_4.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A group of stern-looking judges holding scorecards, sitting in front of a miniature puppet theater",
+				"path": "images/image_5.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A futuristic cityscape with holographic billboards featuring sock puppet advertisements",
+				"path": "images/image_6.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A chaotic courtroom scene with sock puppets as lawyers, judge, and jury",
+				"path": "images/image_7.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A desolate, post-apocalyptic landscape with a lone sock puppet standing dramatically on a hill",
+				"path": "images/image_8.png"
+			}
+		},
+		{
+			"image": {
+				"description": "A random image of a tropical beach at sunset with the text overlay: 'In Conclusion'",
+				"path": "images/image_9.png"
+			}
+		}
+	]
+}
