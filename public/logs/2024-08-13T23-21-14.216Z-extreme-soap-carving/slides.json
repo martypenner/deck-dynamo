@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Extreme Soap Carving"
+  },
+  "presenter": {
+    "name": "Bubbles McSculpt",
+    "title": "Lather Artisan Extraordinaire"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A person in a hazmat suit carving an intricate soap sculpture with a chainsaw",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A bar of soap with the text 'DANGER: SLIPPERY WHEN WET' engraved on it",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A giant soap bubble floating over a cityscape",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person parasailing, but instead of a parachute, they're using a massive bar of soap",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A microscopic view of soap molecules forming complex structures",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A soap carving of Mount Rushmore, but with faces of famous cartoon characters",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An Olympic podium made entirely of different colored soaps",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person in a tuxedo using a soap bar as a microphone on a stage",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A soap sculpture of a dragon breathing bubbles instead of fire",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a tornado with the text 'In Conclusion' overlaid on it",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}
