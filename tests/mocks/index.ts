@@ -1,9 +1,9 @@
 import closeWithGrace from 'close-with-grace'
 import { setupServer } from 'msw/node'
+import { handlers as anthropicHandlers } from './anthropic'
 import { handlers as githubHandlers } from './github'
 import { handlers as replicateHandlers } from './replicate'
 import { handlers as resendHandlers } from './resend'
-import { handlers as anthropicHandlers } from './anthropic'
 
 export const server = setupServer(
 	...resendHandlers,
