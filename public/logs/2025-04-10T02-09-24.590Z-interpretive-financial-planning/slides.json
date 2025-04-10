@@ -1,0 +1,71 @@
+{
+  "title": {
+    "content": "Interpretive Financial Planning"
+  },
+  "presenter": {
+    "name": "Morgan Fiscus",
+    "title": "Visionary Fiscal Interpreter"
+  },
+  "slides": [
+    {
+      "image": {
+        "description": "A surrealist painting of melting clocks and dollar bills",
+        "path": "images/image_0.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person juggling various financial symbols (stocks, bonds, real estate) while riding a unicycle on a tightrope",
+        "path": "images/image_1.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An abstract representation of a maze made of credit cards with the text 'Navigate Your Fiscal Labyrinth' overlaid",
+        "path": "images/image_2.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A detailed close-up of a butterfly wing with stock market charts as the wing patterns",
+        "path": "images/image_3.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A whimsical illustration of a piggy bank sprouting tree branches with various currencies as leaves",
+        "path": "images/image_4.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An astronaut planting a flag on the moon, but the flag is a giant dollar bill",
+        "path": "images/image_5.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A Rube Goldberg machine made entirely of coins and banknotes",
+        "path": "images/image_6.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A person meditating on top of a giant coin, surrounded by floating mathematical equations",
+        "path": "images/image_7.png"
+      }
+    },
+    {
+      "image": {
+        "description": "An abstract painting of intertwining roads and rivers, with the text 'The Flow of Finance' overlaid",
+        "path": "images/image_8.png"
+      }
+    },
+    {
+      "image": {
+        "description": "A random image of a sunset over a cityscape with the text 'In Conclusion' overlaid",
+        "path": "images/image_9.png"
+      }
+    }
+  ]
+}
