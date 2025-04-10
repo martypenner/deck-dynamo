@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - '@prisma/client'
+  - '@prisma/engines'
+  - '@sentry/cli'
+  - '@sentry/profiling-node'
+  - better-sqlite3
+  - esbuild
+  - msw
+  - prisma
